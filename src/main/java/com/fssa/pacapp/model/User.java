@@ -23,7 +23,6 @@ public class User {
 		this.email = email;
 		this.Mobnum = mobnum;
 		this.password = password;
-		this.DOB = DOB;
 		this.gender = gender;
 	}
 
@@ -34,8 +33,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", email=" + email + ", Mobnum=" + Mobnum + ", password=" + password + ", DOB="
-				+ DOB + ", gender=" + gender + "]";
+		return "User [name=" + name + ", email=" + email + ", Mobnum=" + Mobnum + ", password=" + password + ", gender=" + gender + "]";
 	}
 
 	public void setName(String name) {
@@ -66,13 +64,7 @@ public class User {
 		this.password = password;
 	}
 
-	public String getDOB() {
-		return DOB;
-	}
-
-	public void setDOB(String dOB) {
-		DOB = dOB;
-	}
+	
 	public void setGender(char gender) {
 		this.gender = gender;
 	}

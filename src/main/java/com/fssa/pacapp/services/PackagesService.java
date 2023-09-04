@@ -5,8 +5,8 @@ import java.util.function.BooleanSupplier;
 import com.fssa.pacapp.model.Packages;
 import com.fssa.pacapp.services.exceptions.ServiceException;
 import com.fssa.pacapp.validation.PackagesValidator;
-import newapp.dao.PackagesDAO;
-import newapp.dao.exception.DAOException;
+import com.fssa.pacapp.dao.PackagesDAO;
+import com.fssa.pacapp.dao.exception.DAOException;
 
 public class PackagesService {
 

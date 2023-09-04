@@ -6,8 +6,8 @@ import com.fssa.pacapp.model.User;
 import com.fssa.pacapp.services.exceptions.ServiceException;
 import com.fssa.pacapp.validation.UserValidator;
 import com.fssa.pacapp.validation.exceptions.InvalidUserException;
-import newapp.dao.UserDAO;
-import newapp.dao.exception.DAOException;
+import com.fssa.pacapp.dao.UserDAO;
+import com.fssa.pacapp.dao.exception.DAOException;
 
 public class UserService {
 	public boolean registerUser(User user) throws ServiceException {

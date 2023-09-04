@@ -5,8 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import com.fssa.pacapp.model.Packages;
-import newapp.dao.ConnectionUtil;
-import newapp.dao.exception.DAOException;
+import com.fssa.pacapp.dao.ConnectionUtil;
+import com.fssa.pacapp.dao.exception.DAOException;
 
 public class PackagesDAO {
 
