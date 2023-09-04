@@ -1,4 +1,4 @@
-package pacapp.services.exceptions;
+package com.fssa.pacapp.services.exceptions;
 
 public class ServiceException extends Exception {
 	/**

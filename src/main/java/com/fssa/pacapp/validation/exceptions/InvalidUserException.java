@@ -1,4 +1,4 @@
-package pacapp.validation.exceptions;
+package com.fssa.pacapp.validation.exceptions;
 
 public class InvalidUserException extends Exception {
 	/**
