@@ -1,0 +1,7 @@
+pacapp\dao\UserDAO.class
+pacapp\validation\UserValidator.class
+pacapp\dao\exception\DAOException.class
+pacapp\services\UserService.class
+pacapp\model\User.class
+pacapp\validation\exceptions\InvalidUserException.class
+pacapp\services\exceptions\ServiceException.class
