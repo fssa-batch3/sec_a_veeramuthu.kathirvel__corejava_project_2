@@ -1,4 +1,4 @@
-package com.fssa.pacapp.dao.exception;
+ package com.fssa.pacapp.dao.exception;
 
 public class DAOExceptionpackege extends Exception {
 	

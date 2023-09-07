@@ -1,11 +1,24 @@
-package com.fssa.pacapp.validation;
+ package com.fssa.pacapp.validation;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.fssa.pacapp.model.Packages;
+import com.fssa.pacapp.validation.exceptions.InvalidPackageException;
+
 public class PackagesValidator {
 	
+	public static boolean validatePackage(Packages packages) throws InvalidPackageException {
 
+		if (packages != null &&
+		// validateURL(product.getUrl()) &&
+				validateImageURL(packages.getImage()) && validatePrice(packages.getPrice())  && validateDescription(packages.getDescription())  && validateDuration(packages.getDuration())
+				) {
+			return true;
+		} else {
+			throw new InvalidPackageException("Package details not valid");
+		}
+	}
 	
 
 
@@ -38,15 +51,17 @@ public class PackagesValidator {
 	
 	
 	
-	public static boolean validatePrice(CharSequence user) {
+	public static boolean validatePrice(int p) {
 		boolean match = false;
-		if (user == null)
+		String price = Integer.toString(p);
+
+		if (price == null)
 			return false;
 		try {
 
-			String regex = "[0-9]{2}";
+			String regex = "[0-9]{5}";
 			Pattern n = Pattern.compile(regex);
-			Matcher m = n.matcher(user);
+			Matcher m = n.matcher(price);
 			match = m.matches();
 			if (match) {
 				System.out.println("The price amount  is valid");
@@ -109,6 +124,10 @@ public class PackagesValidator {
 	    }
 	    return match;
 	}
+
+
+
+	
 
 
 	

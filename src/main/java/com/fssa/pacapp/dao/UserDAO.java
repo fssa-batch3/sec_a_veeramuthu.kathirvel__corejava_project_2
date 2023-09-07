@@ -1,4 +1,4 @@
-package com.fssa.pacapp.dao;
+ package com.fssa.pacapp.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,10 +10,6 @@ import com.fssa.pacapp.model.User;
 import com.fssa.pacapp.dao.exception.DAOException;
 
 public class UserDAO {
-	
-	
-	
-
 
 	public boolean register(User user) throws DAOException {
 		String insertQuery = "Insert INTO user (email,name, password,phone_number,gender) VALUES(?,?,?,?,?)";
@@ -28,7 +24,7 @@ public class UserDAO {
 			statement.setString(3, user.getPassword());
 			statement.setString(4, user.getMobnum());
 			String genderStr = String.valueOf(user.getGender());
-	        statement.setString(5, genderStr);
+			statement.setString(5, genderStr);
 
 			// Execute the query
 			int rows = statement.executeUpdate();
@@ -55,7 +51,7 @@ public class UserDAO {
 
 			if (userExists) {
 				System.out.println("User present.");
-				String storedPassword = resultSet.getString(" password");
+				String storedPassword = resultSet.getString("password");
 				System.out.println(storedPassword);
 				if (storedPassword.equals(password)) {
 					System.out.println(" User successfully logged in.");

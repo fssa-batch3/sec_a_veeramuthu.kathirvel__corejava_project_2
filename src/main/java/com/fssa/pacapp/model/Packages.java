@@ -6,10 +6,16 @@ public class Packages {
 	private String description;
 	private int price;
 	private String duration;
-	
+	 
 	public Packages(){
 		
 		
+	}
+	public Packages(String image, int price, String duration, String description) {
+		this.imageURL = image;
+		this.description = description;
+		this.price = price;
+		this.duration = duration;
 	}
 	
 	public String getImage() {
@@ -22,12 +28,7 @@ public class Packages {
 		return description;
 	}
 	
-	public Packages(String image, String description, int price, String duration) {
-		this.imageURL = image;
-		this.description = description;
-		this.price = price;
-		this.duration = duration;
-	}
+	
 	
 	public void setDescription(String description) {
 		this.description = description;
