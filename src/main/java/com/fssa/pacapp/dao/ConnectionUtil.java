@@ -13,7 +13,7 @@ public class ConnectionUtil {
 		DB_URL = System.getenv("DB_URL");
 		DB_USER = System.getenv("DB_USER");
 		DB_PASSWORD = System.getenv("DB_PASSWORD");
-		Connection connection = null;
+		Connection connection = null; 
 
 		try {
 

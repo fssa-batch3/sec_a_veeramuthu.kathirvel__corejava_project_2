@@ -18,7 +18,7 @@ public class UserDAO {
 				Connection connection = ConnectionUtil.getConnection();
 				// Prepare SQL statement
 				PreparedStatement statement = connection.prepareStatement(insertQuery);) {
-
+ 
 			statement.setString(1, user.getEmail());
 			statement.setString(2, user.getName());
 			statement.setString(3, user.getPassword());

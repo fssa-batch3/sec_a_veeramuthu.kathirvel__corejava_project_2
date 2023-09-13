@@ -1,4 +1,4 @@
-package com.fssa.pacapp.services.exceptions;
+ package com.fssa.pacapp.services.exceptions;
 
 public class PackegeserviceException extends Exception   {
 	

@@ -38,7 +38,7 @@ public class PackagesValidator {
 				match = true;
 			} else {
 				System.out.println("The Image is not valid");
-				return false;
+				return false; 
 			}
 
 		} catch (Exception e) {

@@ -1,4 +1,4 @@
-package com.fssa.pacapp.model;
+ package com.fssa.pacapp.model;
 
 public class Packages {
 	
