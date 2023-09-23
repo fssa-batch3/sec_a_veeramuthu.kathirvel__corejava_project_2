@@ -16,7 +16,7 @@ public class ConnectionUtil {
 		Connection connection = null; 
 
 		try {
-
+ 
 		
 			Class.forName("com.mysql.cj.jdbc.Driver");
 //					Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/livre", "root", "123456");
@@ -25,7 +25,7 @@ public class ConnectionUtil {
 	
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new RuntimeException("Unable to connect to database", e);
+			throw new RuntimeException("Unable to connect to database", e); 
 
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

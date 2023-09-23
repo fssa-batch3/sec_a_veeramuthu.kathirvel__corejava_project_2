@@ -14,15 +14,15 @@ public class PackagesService {
 	public boolean CreatePackages(Packages packages) throws ServiceException {
 		PackagesDAO packagesDAO = new PackagesDAO();
 		try {
-			//PackagesValidator.validatePackage(packages);
+			PackagesValidator.validatePackage(packages);
 			if (packagesDAO.CreatePackeges(packages)) {
 				return true;
 			} else {
-				System.out.println("not valid");
+				System.out.println("not valid"); 
 				return false;
 			}
 
-		} catch (DAOException e) {
+		} catch (DAOException | InvalidPackageException e) {
 			throw new ServiceException(e);
 		}
 
@@ -37,6 +37,56 @@ public class PackagesService {
 	        throw new ServiceException(e);
 	    }
 	}
+	
+	
+	public Packages getIdByObject(int id) throws ServiceException {
+	    PackagesDAO packageDAO = new PackagesDAO();
+	    try {
+	        Packages packageList = packageDAO.getIdByObject(id);
+	        return packageList;
+	    } catch (DAOException e) {
+	        throw new ServiceException(e);
+	    }
+	}
+	
+	public boolean updatePackageDetails(Packages updatedPackage) throws ServiceException {
+		System.out.println(updatedPackage.toString());
+		PackagesDAO packageDAO = new PackagesDAO();
+	    try {
+	        // Call the DAO method to update the package
+	        boolean success = packageDAO.updatePackage(updatedPackage);
+
+	        boolean updatepackage = true;
+			// Return the result of the update operation
+	        return updatepackage;
+	    } catch (DAOException e) {
+	        throw new ServiceException( e);
+	    }
+	}
+	
+	public boolean deletePackage(int packageId) throws ServiceException {
+	    PackagesDAO packagesDAO = new PackagesDAO();
+	    try {
+	        // Call the DAO method to delete the package
+	        boolean success = packagesDAO.deletePackage(packageId);
+
+	        // Check if the deletion was successful
+	        if (success) {
+	            return true;
+	        } else {
+	            System.out.println("Deletion failed"); // You can replace this with appropriate logging
+	            return false;
+	        }
+	    } catch (DAOException e) {
+	        throw new ServiceException(e);
+	    }
+	}
+
+	
+	
+
+	
+	
 
 
 

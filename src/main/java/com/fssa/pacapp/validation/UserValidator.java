@@ -17,7 +17,7 @@ public class UserValidator {
 		
 		
 	}
-	
+	 
 	public static boolean validateLogIn(User user) throws InvalidUserException {
 		if (user != null && validateEmail(user.getEmail()) && validatePassword(user.getPassword())) {
 			return true;

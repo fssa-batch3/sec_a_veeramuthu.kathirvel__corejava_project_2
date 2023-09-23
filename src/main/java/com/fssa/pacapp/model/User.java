@@ -1,4 +1,4 @@
- package com.fssa.pacapp.model;
+package com.fssa.pacapp.model;
 
 public class User {
 
@@ -8,17 +8,17 @@ public class User {
 	private String password;
 	private String DOB;
 	private char gender;
-	
 
 	private int id;
-	
-	public User() {};
+
+	public User() {
+	};
 
 	public String getName() {
 		return name;
 	}
 
-	public User(String name, String email,String mobnum,String password,String DOB, char gender) {
+	public User(String name, String email, String mobnum, String password, String DOB, char gender) {
 		this.name = name;
 		this.email = email;
 		this.Mobnum = mobnum;
@@ -33,7 +33,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", email=" + email + ", Mobnum=" + Mobnum + ", password=" + password + ", gender=" + gender + "]";
+		return "User [name=" + name + ", email=" + email + ", Mobnum=" + Mobnum + ", password=" + password + ", gender="
+				+ gender + "]";
 	}
 
 	public void setName(String name) {
@@ -64,15 +65,13 @@ public class User {
 		this.password = password;
 	}
 
-	
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
+
 	public char getGender() {
 		return gender;
 	}
-
-	
 
 	public int getId() {
 		return id;
@@ -81,7 +80,5 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	
 
 }

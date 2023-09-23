@@ -9,7 +9,7 @@ public class DAOException  extends Exception{
 	}
 
 	public DAOException(Throwable e) {
-		super(e);
+		super(e); 
 	}
 
 }
